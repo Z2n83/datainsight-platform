@@ -1,0 +1,37 @@
+# DataInsight Backend MVP - Python Dependencies
+# Python 3.12+
+
+# Web Framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# Database
+sqlalchemy==2.0.36
+pymysql==1.1.1
+aiosqlite==0.20.0
+greenlet==3.1.1
+
+# Redis (optional for MVP dev)
+redis==5.2.1
+aioredis==2.0.1
+
+# Auth
+pyjwt==2.10.1
+bcrypt==4.2.1
+
+# Data Validation
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# Data Analysis
+pandas==2.2.3
+numpy==2.2.1
+
+# Scheduled Tasks
+apscheduler==3.11.0
+
+# HTTP Client (for external data source connections)
+httpx==0.28.1
+
+# Dev
+python-dotenv==1.0.1

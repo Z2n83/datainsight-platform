@@ -6,7 +6,9 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![React](https://img.shields.io/badge/React-18.x-61dafb.svg)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6.svg)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-20.x-339933.svg)](https://nodejs.org)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688.svg)](https://fastapi.tiangolo.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1.svg)](https://www.mysql.com/)
 
 ---
 
@@ -77,6 +79,38 @@
 
 ---
 
+## 📸 程序截图
+
+### 登录页
+![登录页](docs/screenshots/01-login.png)
+
+### 运营工作台（Dashboard）
+![运营工作台](docs/screenshots/02-dashboard.png)
+
+核心 KPI 卡片、数据量/异常趋势图、设备状态分布、待办事项、最近预警。
+
+### 数据源管理
+![数据源管理](docs/screenshots/03-data-sources.png)
+
+数据源列表、连接状态、类型筛选、连接测试、手动同步。
+
+### 数据集管理
+![数据集管理](docs/screenshots/04-datasets.png)
+
+数据集列表、字段详情抽屉、数据预览。
+
+### 数据分析工作台
+![数据分析](docs/screenshots/05-data-analysis.png)
+
+数据集 → 指标 → 分析方式 → 时间粒度 四步配置，生成图表 + 摘要 + 洞察 + 数据明细。
+
+### 预警中心
+![预警中心](docs/screenshots/06-alerts.png)
+
+四级预警统计卡片、等级/状态筛选、实时预警列表。
+
+---
+
 ## 🏗️ 产品架构
 
 ```
@@ -106,16 +140,14 @@
 | **UI 组件库** | Ant Design 5.x | 企业级 UI 组件体系 |
 | **图表库** | ECharts 5.x + D3.js | 数据可视化 |
 | **构建工具** | Vite 5.x | 快速 HMR，ESBuild 构建 |
-| **后端框架** | Node.js + Express / NestJS | RESTful API 服务 |
-| **数据库** | PostgreSQL 16 | 主数据存储 |
-| **缓存** | Redis 7.x | Session、热点数据、消息队列 |
-| **任务队列** | BullMQ / RabbitMQ | 异步任务、数据同步 |
-| **搜索引擎** | Elasticsearch | 日志检索、全文搜索 |
-| **对象存储** | MinIO / AWS S3 | 文件存储、导出文件 |
-| **实时通信** | WebSocket (Socket.IO) | 实时预警、数据推送 |
-| **认证** | JWT + OAuth2.0 | 身份认证与授权 |
+| **后端框架** | Python 3.12 + FastAPI | RESTful API，异步高性能 |
+| **数据库** | MySQL 8.0 | 主数据存储 |
+| **ORM** | SQLAlchemy 2.0 | 异步 ORM |
+| **缓存** | Redis 7.x | Session、热点数据 |
+| **数据分析** | Pandas | 聚合计算与数据清洗 |
+| **定时任务** | APScheduler | 进程内任务调度 |
+| **认证** | JWT + bcrypt | 身份认证与授权 |
 | **容器化** | Docker + Docker Compose | 一键部署 |
-| **CI/CD** | GitHub Actions | 自动化测试与部署 |
 
 ---
 
